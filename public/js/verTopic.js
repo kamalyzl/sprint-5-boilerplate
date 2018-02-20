@@ -22,9 +22,12 @@ function showText(result) {
   result.forEach(element => {
     // console.log(element);
     let $content = $('#content-text');
+    let $title = $('#title');
     $content.append(
       `<div class="col-2">${element.author_name} dice</div>
     <div class="col-10">${element.content}</div>`);
+
+    $title.html(`<<h1>${localStorage.title}</h1>`);
   });
 }
 
