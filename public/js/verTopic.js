@@ -1,5 +1,6 @@
-
+// API
 let answer = `http://examen-laboratoria-sprint-5.herokuapp.com/topics/${localStorage.usuario}/responses`;
+let $sendComent = $('#sendComent');
 getParameterByName('kamaly');
 
 $.ajax({
@@ -8,21 +9,39 @@ $.ajax({
   datatype: 'json',
   context: document.body,
   contentType: 'application/json',
-  success: function (result) {
+  success: function(result) {
     console.log(result);
     showText(result);
     // autocompleteText(result);
   }
-}).done(function () {
+}).done(function() {
 });
-
 
 // Muestra todo el contenido
 function showText(result) {
   result.forEach(element => {
     // console.log(element);
     let $content = $('#content-text');
-    $content.append(`<h5>Comentario: ${element.content} </h5>
-    <p>Por: ${element.author_name}.</p>`);
+    $content.append(
+      `<div class="col-2">${element.author_name} dice</div>
+    <div class="col-10">${element.content}</div>`);
   });
 }
+
+
+// Boton que envia la información sobre los comentarios a la API mediante un POST
+$sendComent.click(function() {
+  $.post(answer,
+    {
+      author_name: $('#nameAnswer').val(),
+      content: $('#comentText').val()
+    },
+    function(data, status) {
+      console.log(data);
+      let $content = $('#content-text');
+      // let firstChil = $('#content-text').eq(0);
+      $content.append(`
+       <div class="col-3">${data.author_name} dice : </div>
+      <div class="col-8">${data.content}</div> `);
+    });
+});

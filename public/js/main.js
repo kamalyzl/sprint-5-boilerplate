@@ -27,10 +27,9 @@ function showText(result) {
     // $content.append(`<div class="styleContent"> <h2>Tema: ${element.content} <p class="totalRespon" data-id=${element.id}>${element.responses_count} respuestas</p></h2>
     // <p>Autor: ${element.author_name}.</p></div>`);
 
-    $content.append(`
-                        <tr>
+    $content.append(`   <tr>
                           <th scope="row" class="totalRespon bg-dark text-light" data-id=${element.id}>${element.id}</th>
-                          <td  class="totalRespon">${element.content}</td>
+                          <td  class="totalRespon" data-id=${element.id}>${element.content}</td>
                           <td>${element.author_name}</td>
                           <td>${element.responses_count}</td>
                         </tr>`);
@@ -61,14 +60,14 @@ $sendData.click(function() {
       $(firstChil).prepend(`
         <tr>
           <th scope="row" class="totalRespon bg-dark text-light" data-id=${data.id}>${data.id}</th>
-          <td class="totalRespon">${data.content}</td>
+          <td class="totalRespon" data-id=${data.id}>${data.content}</td>
           <td>${data.author_name}</td>
           <td>0</td>
         </tr>`);
     });
 });
- 
- 
+
+
 // Cuando el usuario haga click a cualquier etiqueta con la clase  .totalRespon, guardaremos el id
 $(document).on('click', '.totalRespon', function() {
   console.log($(this));

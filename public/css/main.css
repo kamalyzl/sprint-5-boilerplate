@@ -1,35 +1,28 @@
 .title {
-    /* outline: 1px solid red; */
-    background: #BF3100;
-    color: white;
-    padding: 20px;
-    /* font-size: 2em; */
+	background:#FFC107;
+	color:white;
+	padding:20px;
 }
-
 button {
-    background: #BF3100;
-    color: white;
-}
-.totalRespon {
-    /* background: #333; */
-    /* color: white; */
-    
-     
-     
+	background:#FFC107;
+	color:white;
 }
 .totalRespon:hover {
-   cursor: pointer;
+	cursor:pointer;
 }
-
 li {
-    list-style: none;
+	list-style:none;
 }
-
 .styleContent {
-    background: #eee;
-    border: 2px solid rgb(173, 94, 68);
-    margin: 5px 0;
+	background:#eee;
+	border:2px solid rgb(173,94,68);
+	margin:5px 0;
 }
 .styleContent h2 {
-    background: rgb(173, 94, 68);
+	background: rgb(173,94,68);
+}
+/* AQUI EMPIEZA EL DISEÑO DE VERTOPIC.HTML */
+.sectionAnswer {
+	background:#333;
+	color: white;
 }
