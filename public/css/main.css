@@ -1,0 +1,23 @@
+.title {
+    /* outline: 1px solid red; */
+    background: #BF3100;
+    color: white;
+    padding: 20px;
+    /* font-size: 2em; */
+}
+
+button {
+    background: #BF3100;
+    color: white;
+}
+.totalRespon {
+    background: #333;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+}
+
+li {
+    list-style: none;
+}
