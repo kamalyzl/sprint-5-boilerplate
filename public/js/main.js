@@ -3,7 +3,7 @@ $('#myModal').on('shown.bs.modal', function() {
 });
 
 const $search = $('#search');
-let data = 'http://examen-laboratoria-sprint-5.herokuapp.com/topics';
+let data = 'https://examen-laboratoria-sprint-5.herokuapp.com/topics';
 
 $.ajax({
   url: data,
@@ -11,35 +11,35 @@ $.ajax({
   datatype: 'json',
   context: document.body,
   contentType: 'application/json',
-  statusCode: {
-    404: function() {
-      alert('error');
-    }
-  },
   success: function(result) {
     showText(result);
-    searchTheme(result);
+    autocompleteText(result);
   }
 }).done(function() {
-  $(this).addClass('done');
+ 
 });
 
 // Muestra todo el contenido
 function showText(result) {
   result.forEach(element => {
     let $content = $('#content-text');
-    console.log(element);
-    $content.append(` <h2>${element.author_name}  <span class="totalRespon">${element.responses_count} respuestas</span></h2>
-    <p>${element.content}.</p>`);
+    $content.append(` <h2>Por: ${element.author_name}  <span class="totalRespon">${element.responses_count} respuestas</span></h2>
+    <p>Descripción: ${element.content}.</p>`);
   });
 }
 
+function autocompleteText(result) {
+  let availableTags = result.map((val) => val.content);
+  $('#search').autocomplete({
+    source: availableTags
+  });
+}
 
-$search.submit(function(event) {
-  searchTheme(result);
-  event.preventDefault();
-});
-
- 
-
-
+// $search.submit(function (event) {
+//   event.preventDefault();
+//   let $content = $('#content-text');
+//   if ($('input:first').val() === element.author_name) {
+//     $content.html('');
+//     alert('son iguales');
+//   }
+// });
