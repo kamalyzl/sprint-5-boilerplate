@@ -1,5 +1,5 @@
 // API
-let answer = `http://examen-laboratoria-sprint-5.herokuapp.com/topics/${localStorage.usuario}/responses`;
+let answer = `https://examen-laboratoria-sprint-5.herokuapp.com/topics/${localStorage.usuario}/responses`;
 let $sendComent = $('#sendComent');
 getParameterByName('kamaly');
 
