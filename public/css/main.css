@@ -11,13 +11,25 @@ button {
     color: white;
 }
 .totalRespon {
-    background: #333;
-    border-radius: 5px;
-    color: white;
-    font-size: 12px;
-    padding: 5px;
+    /* background: #333; */
+    /* color: white; */
+    
+     
+     
+}
+.totalRespon:hover {
+   cursor: pointer;
 }
 
 li {
     list-style: none;
+}
+
+.styleContent {
+    background: #eee;
+    border: 2px solid rgb(173, 94, 68);
+    margin: 5px 0;
+}
+.styleContent h2 {
+    background: rgb(173, 94, 68);
 }

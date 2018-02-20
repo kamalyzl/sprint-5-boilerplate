@@ -1,25 +1,61 @@
-<!-- Mostrar en este HTML las respuestas de cada topic -->
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
 
-    <h1>Aqui va el contenido de tema individual</h1>
-    <!-- Borar cuando se entienda como pasar info con topic id-->
-    <h1>Ingresa el topic id a este html usando la url.</h1>
-    <a href='verTopic.html?topic_id=2'>Algo asi</a><br/>
-    <a href='verTopic.html?topic_id=1'>O asi</a>
-    <!-- Borar cuando se entienda como pasar info con topic id-->
-    
-     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body>
+
+  
+  <div class="col-md-10" id="content-text">
+    <!-- Aqui se visualiza los datos obtenidos de la API -->
+  </div>
 
 
-    <script src="js/functions.js"></script>
-    <script src="js/verTopic.js"></script>
-  </body>
+
+
+  <div class="container-fluid">
+    <div class="row justify-content-center title">
+      <h1 class="">Foro de Laboratoria</h1>
+    </div>
+    <a href="index.html" class="btn btn-danger m-2">Inicio</a>
+    <div class="row">
+      <table class="table" id="">
+        <!-- Aqui se visualiza los datos obtenidos de la API -->
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Respuestas</th>
+          </tr>
+        </thead>
+        <tbody id="content-text">
+          <!-- <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr> -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/verTopic.js"></script>
+</body>
+
 </html>
