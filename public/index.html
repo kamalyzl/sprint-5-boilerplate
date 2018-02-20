@@ -1,20 +1,82 @@
 <!-- mostrar en este HTML los TOPICS de /topics -->
-
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<html lang="en">
 
-    <h1>Aqui van todos los temas</h1>
-    
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    
-    <script src="js/functions.js"></script>
-    <script src="js/main.js"></script>
-    
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row justify-content-center title">
+      <h1 class="">Foro Coll</h1>
+    </div>
+    <div class="row justify-content-center">
+      <button type="button" class="btn mt-2" data-toggle="modal" data-target="#exampleModal">Crear nuevo Tema</button>
+    </div>
+    <div class="row justify-content-center">
+      <form id="search">
+        <input type="text" placeholder="Encuentra" class="mt-2">
+      </form>
+
+
+    </div>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-10" id="content-text">
+        <!-- Aqui se visualiza los datos obtenidos de la API -->
+        <!-- <h2>Title <span class="totalRespon">12 respuestas</span> </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur odio, reprehenderit sed ab numquam natus consequuntur
+          quibusdam consequatur quos, ea quidem labore saepe a nobis, pariatur delectus quis. Minus, deleniti.</p>
+      </div> -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Nuevo Topic</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Por</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Mensaje</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn" data-dismiss="modal">Close</button>
+              <button type="button" class="btn">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+      <script src="js/functions.js"></script>
+      <script src="js/main.js"></script>
+
+</body>
+
 </html>
